@@ -7,6 +7,14 @@
   bottom: 17.31%;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+#title{
+  font-family: 'Viga', sans-serif;
+  background: #FFFFFF;
+  border: 1px solid #2F798C
+
+}
+
 .main-nav{
   display:flex;
   font-size: 1.25rem;
@@ -95,6 +103,7 @@
   font-weight: normal;
 }
 
+
 .button{
   font-size: 5rem;
   background: #0bd;
@@ -107,6 +116,13 @@
   background: #0090aa;
 }
 
+.main-btn{
+  background: #2F798C;
+  border-radius: 100px;
+  min-width: 170px;
+  min-height: 68px;
+}
+
 
 .home-content{
   // background-image: url('../../assets/images/attractions-banner.png');
@@ -116,6 +132,15 @@
   background-position: center;
   background-repeat: no-repeat;
 
+}
+
+.big-bg{
+  background-image: url('../../../assets/images/home-banner.png');
+  // min-height: 100vh;
+  min-height: 536px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #home .page-title{
