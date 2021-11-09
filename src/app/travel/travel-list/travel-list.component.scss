@@ -5,14 +5,47 @@
   right: 83.83%;
   top: 27.88%;
   bottom: 17.31%;
+
+  // position: absolute;
+  width: 70px;
+  height: 72px;
+  left: 57px;
+  top: 39px;
+}
+
+.subTitle{
+  // position: absolute;
+  width: 128px;
+  height: 38px;
+  // left: 101px;
+  // top: 635px;
+
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 38px;
+
+  color: #2F798C;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
 #title{
-  font-family: 'Viga', sans-serif;
-  background: #FFFFFF;
-  border: 1px solid #2F798C
+  font-family: 'Viga';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 30px;
 
+  // position: absolute;
+  max-width: 135px;
+  height: 30px;
+  left: 141px;
+  top: 60px;
+
+  color: #FFFFFF;
+
+  border: 0px solid #2F798C;
 }
 
 .main-nav{
@@ -45,8 +78,12 @@
 }
 
 
-.wrapper{
-  max-width: 1280px;
+.nowrap{
+  white-space:nowrap;
+}
+
+.page-header{
+  max-width: 100%;
   margin: 0 auto;
   // padding-top: 10%;
 }
@@ -77,16 +114,31 @@
 
 /*Main Content*/
 .home-content{
+  max-width: 100%;
+  margin: 0 auto;
   color: #FFF;
   text-align: center;
   // margin-top: 10%;
-  padding-top: 16%;
+  // padding-top: 16%;
 }
 
 .home-content p{
   font-style: 1.125rem;
   margin: 10px 0 42px;
 
+  // position: absolute;
+  max-width: 256px;
+  height: 38px;
+  // left: 592px;
+  // top: 241px;
+
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 38px;
+
+  color: #FEFEFE;
 }
 
 .home-content span{
@@ -97,12 +149,16 @@
 
 /*標題*/
 .page-title{
-  font-size:5rem;
+  font-size: 42px;
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: normal;
+  // position: absolute;
+  // width: 168px;
+  height: 50px;
+  // left: 636px;
+  // top: 166px;
 }
-
 
 .button{
   font-size: 5rem;
@@ -116,13 +172,12 @@
   background: #0090aa;
 }
 
-.main-btn{
+#btnFilter{
   background: #2F798C;
   border-radius: 100px;
   min-width: 170px;
   min-height: 68px;
 }
-
 
 .home-content{
   // background-image: url('../../assets/images/attractions-banner.png');
@@ -131,13 +186,12 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
 }
 
-.big-bg{
+.wrapper{
   background-image: url('../../../assets/images/home-banner.png');
-  // min-height: 100vh;
-  min-height: 536px;
+  min-width: 100%;
+  min-height: 580px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -148,6 +202,16 @@
   text-shadow: 0px 4px 3px rgba(13, 11, 12, 0.2);
 }
 
+#btnSearch{
+  // position: absolute;
+  width: 219px;
+  height: 68px;
+  left: 611px;
+  top: 442px;
+
+  background: #2F798C;
+  border-radius: 100px;
+}
 
 #searchKeyword{
   // position: absolute;
@@ -159,6 +223,15 @@
   box-shadow: 0px 4px 3px rgba(13, 11, 12, 0.2);
   border-radius: 6px;
   padding-left: 2%;
+
+  // position: absolute;
+  width: 677px;
+  height: 68px;
+  left: 285px;
+  top: 314px;
+
+  background: #FEFEFE;
+  border-radius: 20px;
 }
 
 #selCategory,
@@ -203,10 +276,100 @@
 }
 
 
-/**/
-// .functionArea{
-//   display: flex;
-//   justify-content: center;
-//   flex-direction: row;
-// }
 
+/* Card Start */
+.card{
+  // position: absolute;
+  max-width: 366px;
+  height: 515px;
+  // left: 101px;
+  // top: 743px;
+  // margin : 8%;
+
+  background: #FEFEFE;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: 2px solid #FEFEFE;
+}
+
+.imgArea{
+//   position: absolute;
+// width: 366px;
+// height: 251px;
+// left: 101px;
+// top: 743px;
+
+// background: url('../../../assets/images/wet-place.png');
+border-radius: 15px 15px 0px 0px;
+}
+
+.card-position,
+.card-title{
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #333333;
+}
+
+.card-open-time,
+.card-mark{
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #333333;
+}
+
+.card-detail button{
+  background: #2F798C;
+  border-radius: 20px;
+
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+
+  width: 219px;
+  height: 68px;
+}
+
+/* Card End */
+
+
+.detail-attractions-info div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 4%;
+}
+
+.more-attractions{
+  text-align: center;
+}
+
+
+.more-attractions button{
+  border: 3px solid #2F798C;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+
+  margin: 4%;
+
+  color: #2F798C;
+  width: 765px;
+  padding:1%;
+}

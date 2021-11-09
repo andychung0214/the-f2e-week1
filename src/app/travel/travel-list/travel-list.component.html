@@ -1,24 +1,119 @@
-<div id="home" class="big-bg">
+<div id="home" class="wrapper">
 
-  <header class="page-header wrapper">
-      <h1 style="display: flex; flex-direction: row; justify-content: flex-start;">
-          <a href="/#">
-            <img class="logo" src="../../../assets/images/logo.png" alt="台灣旅遊景點導覽 首頁">
-          </a>
-          <label id='title'>TaiFun旅遊網</label>
-      </h1>
+  <header style="display: flex; flex-direction: row; justify-content: flex-start;" class="page-header ">
+      <a href="/#/travel-list">
+        <img class="logo" src="../../../assets/images/logo.png" alt="台灣旅遊景點導覽 首頁">
+      </a>
+      <div style='display: flex;flex-direction: column; justify-content: center;'>
+        <label id='title'>TaiFun旅遊網</label>
+      </div>
   </header>
 
-  <div class="home-content wrapper">
-    <h2 class="page-title">尋找臺灣</h2>
-    <p>景點、美食、活動</p>
+  <div class="home-content">
+    <div style="display: flex; flex-direction: row; justify-content:center;"  class="page-title">尋找臺灣</div>
+    <div style="display: flex; flex-direction: row; justify-content: center;" class="page-category"><p>景點、美食、活動</p></div>
     <div style="display: flex; flex-direction: row; justify-content: center;">
       <input type="text" name="searchKeyword" id="searchKeyword" placeholder="請輸入關鍵字">
-      <button class="main-btn">篩選</button>
+      <button id='btnFilter' class="main-btn">篩選</button>
     </div>
-    <div>
-      <button class="main-btn">搜尋</button>
-    </div>
+    <button id='btnSearch' class="main-btn">搜尋</button>
+
   </div>
 
+</div>
+
+<div class="detail-attractions-info">
+
+  <div class="nowrap">
+    <label class="subTitle">
+      熱門景點
+    <img src="../../../assets/images/fire.png" alt="" srcset="">
+    </label>
+
+  </div>
+
+  <div class='card'>
+    <div class='imgArea'>
+      <img src="../../../assets/images/wet-place.png" alt="" srcset="">
+    </div>
+    <div class='card-position'>
+      <label for="">
+        臺中市 清水區
+        <img src="../../../assets/images/google-position.png" alt="" srcset="">
+      </label>
+    </div>
+    <div class='card-title'>高美濕地_高美野生動物保護區</div>
+    <div class='card-open-time'>開放時間</div>
+    <div class='card-mark'>詳見官網或電話洽詢</div>
+    <div class='card-detail'><button>查看詳情</button></div>
+  </div>
+
+
+</div>
+<div class='more-attractions'>
+  <a href="/#/attractions"><button>看更多熱門景點</button></a>
+</div>
+
+<div class="detail-attractions-info">
+
+  <div class="nowrap">
+    <label class="subTitle">
+      熱門美食
+    <img src="../../../assets/images/restaurant.png" alt="" srcset="">
+    </label>
+
+  </div>
+
+  <div class='card'>
+    <div class='imgArea'>
+      <img src="../../../assets/images/wet-place.png" alt="" srcset="">
+    </div>
+    <div class='card-position'>
+      <label for="">
+        臺北市 大安區
+        <img src="../../../assets/images/google-position.png" alt="" srcset="">
+      </label>
+    </div>
+    <div class='card-title'>好公道金雞園</div>
+    <div class='card-open-time'>開放時間</div>
+    <div class='card-mark'>週ㄧ至週日 9:00 - 21:00, 週三公休</div>
+    <div class='card-detail'><button>查看詳情</button></div>
+  </div>
+
+
+</div>
+<div class='more-attractions'>
+  <a href="/#/popular-food"><button>看更多熱門美食</button></a>
+</div>
+
+<div class="detail-attractions-info">
+
+  <div class="nowrap">
+    <label class="subTitle">
+      近期活動
+    <img src="../../../assets/images/event.png" alt="" srcset="">
+    </label>
+
+  </div>
+
+  <div class='card'>
+    <div class='imgArea'>
+      <img src="../../../assets/images/museum.png" alt="" srcset="">
+    </div>
+    <div class='card-position'>
+      <label for="">
+        臺北市 北投區
+        <img src="../../../assets/images/google-position.png" alt="" srcset="">
+      </label>
+    </div>
+    <div class='card-title'>幸福就像日常風景</div>
+    <div class='card-open-time'>活動時間</div>
+    <div class='card-mark'>週二至週日 09:00-17:00</div>
+    <div class='card-detail'><button>查看詳情</button></div>
+  </div>
+
+
+</div>
+<div class='more-attractions'>
+  <a href="/#/recent-activities"><button>看更多近期活動</button></a>
 </div>

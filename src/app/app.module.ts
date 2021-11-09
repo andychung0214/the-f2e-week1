@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,6 +11,12 @@ import { AttractionsComponent } from './attractions/attractions.component';
 import { CuisinesComponent } from './cuisines/cuisines.component';
 
 import { TravelListComponent } from './travel/travel-list/travel-list.component';
+import { PopularDestinationComponent } from './travel/popular-destination/popular-destination.component';
+import { RecentActivitiesComponent } from './travel/recent-activities/recent-activities.component';
+import { PopularFoodComponent } from './travel/popular-food/popular-food.component';
+
+import { SharedMaterialModule } from './shared-material/shared-material.module';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -20,11 +27,16 @@ import { TravelListComponent } from './travel/travel-list/travel-list.component'
     TransportComponent,
     AttractionsComponent,
     CuisinesComponent,
-    TravelListComponent
+    TravelListComponent,
+    PopularDestinationComponent,
+    RecentActivitiesComponent,
+    PopularFoodComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedMaterialModule,
+    NoopAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
