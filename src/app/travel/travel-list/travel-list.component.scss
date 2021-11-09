@@ -1,6 +1,4 @@
-.nowrap{
-  white-space:nowrap;
-}
+
 
 .button{
   font-size: 5rem;
@@ -139,12 +137,6 @@ border-radius: 15px 15px 0px 0px;
 /* Card End */
 
 
-.detail-attractions-info div{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 4%;
-}
 
 .more-attractions{
   text-align: center;
@@ -168,4 +160,39 @@ border-radius: 15px 15px 0px 0px;
   color: #2F798C;
   width: 765px;
   padding:1%;
+}
+
+
+.detail-attractions-info,
+.detail-food-info,
+.detail-activities-info
+{
+  display: grid;
+  gap:26px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
+
+
+.detail-attractions-info div,
+.detail-food-info div,
+.detail-activities-info div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 4%;
+}
+
+.nowrap{
+  white-space:nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 4%;
+  font-family: SF Pro Text;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 38px;
 }

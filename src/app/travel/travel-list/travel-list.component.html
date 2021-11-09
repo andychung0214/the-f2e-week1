@@ -1,16 +1,15 @@
 <app-travel-header></app-travel-header>
 
+
+<div class="nowrap">
+  <label class="subTitle">
+    熱門景點
+  <img src="assets/images/fire.png" alt="" srcset="">
+  </label>
+</div>
 <div class="detail-attractions-info">
 
-  <div class="nowrap">
-    <label class="subTitle">
-      熱門景點
-    <img src="assets/images/fire.png" alt="" srcset="">
-    </label>
-
-  </div>
-
-  <div class='card'>
+  <!-- <div class='card' *ngFor="let item of data$ ; let idx =  index">
     <div class='imgArea'>
       <img src="assets/images/wet-place.png" alt="" srcset="">
     </div>
@@ -24,6 +23,23 @@
     <div class='card-open-time'>開放時間</div>
     <div class='card-mark'>詳見官網或電話洽詢</div>
     <div class='card-detail'><button>查看詳情</button></div>
+  </div> -->
+
+  <!--熱門景點 區塊-->
+  <div class='card' *ngFor="let item of destinationDatas; let idx = Index">
+    <div class='imgArea'>
+      <img [src]="item.Picture.PictureUrl1" alt="" srcset="">
+    </div>
+    <div class='card-position'>
+      <label for="">
+        {{item.City}}
+        <img src="assets/images/google-position.png">
+      </label>
+    </div>
+    <div class='card-title'>{{ item.Name }}</div>
+    <div class='card-open-time'>開放時間</div>
+    <div class='card-mark'>{{ item.OpenTime}}</div>
+    <div class='card-detail'><button>查看詳情</button></div>
   </div>
 
 
@@ -32,29 +48,28 @@
   <a href="/#/popular-destination"><button>看更多熱門景點</button></a>
 </div>
 
-<div class="detail-attractions-info">
+<!--熱門美食 區塊-->
+<div class="nowrap">
+  <label class="subTitle">
+    熱門美食
+  <img src="assets/images/restaurant.png" alt="" srcset="">
+  </label>
+</div>
+<div class="detail-food-info">
 
-  <div class="nowrap">
-    <label class="subTitle">
-      熱門美食
-    <img src="assets/images/restaurant.png" alt="" srcset="">
-    </label>
-
-  </div>
-
-  <div class='card'>
+  <div class='card' *ngFor="let item of foodDatas; let idx = Index">
     <div class='imgArea'>
-      <img src="assets/images/wet-place.png" alt="" srcset="">
+      <img [src]="item.Picture.PictureUrl1" style="max-width: 100%; ">
     </div>
     <div class='card-position'>
       <label for="">
-        臺北市 大安區
+        {{item.City}}
         <img src="assets/images/google-position.png" alt="" srcset="">
       </label>
     </div>
-    <div class='card-title'>好公道金雞園</div>
+    <div class='card-title'>{{ item.Name }}</div>
     <div class='card-open-time'>開放時間</div>
-    <div class='card-mark'>週ㄧ至週日 9:00 - 21:00, 週三公休</div>
+    <div class='card-mark'>{{ item.OpenTime}}</div>
     <div class='card-detail'><button>查看詳情</button></div>
   </div>
 
@@ -64,29 +79,29 @@
   <a href="/#/popular-food"><button>看更多熱門美食</button></a>
 </div>
 
-<div class="detail-attractions-info">
+<!--近期活動 區塊-->
+<div class="nowrap">
+  <label class="subTitle">
+    近期活動
+  <img src="assets/images/event.png" alt="" srcset="">
+  </label>
 
-  <div class="nowrap">
-    <label class="subTitle">
-      近期活動
-    <img src="assets/images/event.png" alt="" srcset="">
-    </label>
+</div>
+<div class="detail-activities-info">
 
-  </div>
-
-  <div class='card'>
+  <div class='card' *ngFor="let item of activitiesDatas; let idx = Index">
     <div class='imgArea'>
-      <img src="assets/images/museum.png" alt="" srcset="">
+      <img [src]="item.Picture.PictureUrl1" style="max-width: 100%; ">
     </div>
     <div class='card-position'>
       <label for="">
-        臺北市 北投區
+        {{item.City}}
         <img src="assets/images/google-position.png" alt="" srcset="">
       </label>
     </div>
-    <div class='card-title'>幸福就像日常風景</div>
+    <div class='card-title'>{{ item.Name }}</div>
     <div class='card-open-time'>活動時間</div>
-    <div class='card-mark'>週二至週日 09:00-17:00</div>
+    <div class='card-mark'>{{ item.OpenTime}}</div>
     <div class='card-detail'><button>查看詳情</button></div>
   </div>
 
