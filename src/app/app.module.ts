@@ -10,6 +10,7 @@ import { TransportComponent } from './transport/transport.component';
 import { AttractionsComponent } from './attractions/attractions.component';
 import { CuisinesComponent } from './cuisines/cuisines.component';
 
+import { TravelHeaderComponent } from './travel/travel-header/travel-header.component';
 import { TravelListComponent } from './travel/travel-list/travel-list.component';
 import { PopularDestinationComponent } from './travel/popular-destination/popular-destination.component';
 import { RecentActivitiesComponent } from './travel/recent-activities/recent-activities.component';
@@ -17,7 +18,6 @@ import { PopularFoodComponent } from './travel/popular-food/popular-food.compone
 
 import { SharedMaterialModule } from './shared-material/shared-material.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     TravelListComponent,
     PopularDestinationComponent,
     RecentActivitiesComponent,
-    PopularFoodComponent
+    PopularFoodComponent,
+    TravelHeaderComponent
   ],
   imports: [
     BrowserModule,

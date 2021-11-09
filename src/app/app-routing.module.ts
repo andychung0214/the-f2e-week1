@@ -31,7 +31,7 @@ const routes: Routes = [
       },
       {
         path: 'travel-list',
-        component: AttractionsComponent
+        component: TravelListComponent
       },
       {
         path: 'popular-destination',

@@ -1,163 +1,5 @@
-.logo{
-  max-width: 99px;
-  // position: absolute;
-  left: 8.44%;
-  right: 83.83%;
-  top: 27.88%;
-  bottom: 17.31%;
-
-  // position: absolute;
-  width: 70px;
-  height: 72px;
-  left: 57px;
-  top: 39px;
-}
-
-.subTitle{
-  // position: absolute;
-  width: 128px;
-  height: 38px;
-  // left: 101px;
-  // top: 635px;
-
-  font-family: 'SF Pro Text';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 38px;
-
-  color: #2F798C;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
-#title{
-  font-family: 'Viga';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 30px;
-
-  // position: absolute;
-  max-width: 135px;
-  height: 30px;
-  left: 141px;
-  top: 60px;
-
-  color: #FFFFFF;
-
-  border: 0px solid #2F798C;
-}
-
-.main-nav{
-  display:flex;
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  margin-top: 34px;
-  list-style: none;
-  white-space: nowrap;
-}
-
-.main-nav li{
-  display: flex;
-  flex-direction: row;
-  justify-content: content;
-  // margin-right: 22%;
-}
-
-.main-nav a{
-  color:#432;
-}
-
-.main a:hover{
-  color: #0bd;
-}
-
-.page-header{
-  display: flex;
-  justify-content: space-between;
-}
-
-
 .nowrap{
   white-space:nowrap;
-}
-
-.page-header{
-  max-width: 100%;
-  margin: 0 auto;
-  // padding-top: 10%;
-}
-
-#lbAttractions{
-  color:#FF1D6C
-}
-
-#lbCuisines{
-  color:#FFB72C
-}
-
-#lbTranspot{
-  color:#007350
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
-.main-nav label{
-  font-family: 'Noto Sans TC', sans-serif;
-  cursor: pointer;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
-  text-decoration-line: underline;
-}
-
-
-/*Main Content*/
-.home-content{
-  max-width: 100%;
-  margin: 0 auto;
-  color: #FFF;
-  text-align: center;
-  // margin-top: 10%;
-  // padding-top: 16%;
-}
-
-.home-content p{
-  font-style: 1.125rem;
-  margin: 10px 0 42px;
-
-  // position: absolute;
-  max-width: 256px;
-  height: 38px;
-  // left: 592px;
-  // top: 241px;
-
-  font-family: 'SF Pro Text';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 38px;
-
-  color: #FEFEFE;
-}
-
-.home-content span{
-  color: #FF1D6C
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-
-/*標題*/
-.page-title{
-  font-size: 42px;
-  font-family: 'Roboto', sans-serif;
-  text-transform: uppercase;
-  font-weight: normal;
-  // position: absolute;
-  // width: 168px;
-  height: 50px;
-  // left: 636px;
-  // top: 166px;
 }
 
 .button{
@@ -172,13 +14,6 @@
   background: #0090aa;
 }
 
-#btnFilter{
-  background: #2F798C;
-  border-radius: 100px;
-  min-width: 170px;
-  min-height: 68px;
-}
-
 .home-content{
   // background-image: url('../../assets/images/attractions-banner.png');
   // min-height: 100vh;
@@ -188,51 +23,12 @@
   background-repeat: no-repeat;
 }
 
-.wrapper{
-  background-image: url('../../../assets/images/home-banner.png');
-  min-width: 100%;
-  min-height: 580px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
-#home .page-title{
-  text-transform: none;
-  text-shadow: 0px 4px 3px rgba(13, 11, 12, 0.2);
-}
 
-#btnSearch{
-  // position: absolute;
-  width: 219px;
-  height: 68px;
-  left: 611px;
-  top: 442px;
 
-  background: #2F798C;
-  border-radius: 100px;
-}
 
-#searchKeyword{
-  // position: absolute;
-  width: 445px;
-  height: 40px;
-  // left: 395px;
-  // top: 394px;
-  background-color: #FFF;
-  box-shadow: 0px 4px 3px rgba(13, 11, 12, 0.2);
-  border-radius: 6px;
-  padding-left: 2%;
 
-  // position: absolute;
-  width: 677px;
-  height: 68px;
-  left: 285px;
-  top: 314px;
 
-  background: #FEFEFE;
-  border-radius: 20px;
-}
 
 #selCategory,
 #selCity{
