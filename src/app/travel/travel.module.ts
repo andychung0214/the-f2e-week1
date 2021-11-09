@@ -10,12 +10,7 @@ import { TravelHeaderComponent } from './travel-header/travel-header.component';
 
 
 @NgModule({
-  declarations: [
-    TravelListComponent,
-    PopularFoodComponent,
-    PopularDestinationComponent,
-    RecentActivitiesComponent,
-    TravelHeaderComponent],
+  declarations: [],
   imports: [
     CommonModule
   ]
