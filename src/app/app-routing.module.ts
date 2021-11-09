@@ -3,9 +3,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { LayoutComponent } from './layout/layout.component';
-import { AttractionsComponent } from './attractions/attractions.component';
-import { TransportComponent } from './transport/transport.component';
-import { CuisinesComponent } from './cuisines/cuisines.component';
 
 import { TravelListComponent } from './travel/travel-list/travel-list.component';
 import { RecentActivitiesComponent } from './travel/recent-activities/recent-activities.component';
@@ -17,18 +14,6 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      {
-        path: 'attractions',
-        component: AttractionsComponent
-      },
-      {
-        path: 'transport',
-        component: TransportComponent
-      },
-      {
-        path: 'cuisines',
-        component: CuisinesComponent
-      },
       {
         path: 'travel-list',
         component: TravelListComponent
