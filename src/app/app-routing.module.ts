@@ -8,6 +8,7 @@ import { TravelListComponent } from './travel/travel-list/travel-list.component'
 import { RecentActivitiesComponent } from './travel/recent-activities/recent-activities.component';
 import { PopularFoodComponent } from './travel/popular-food/popular-food.component';
 import { PopularDestinationComponent } from './travel/popular-destination/popular-destination.component';
+import { TravelHeaderComponent } from './travel/travel-header/travel-header.component';
 
 const routes: Routes = [
   {
@@ -32,7 +33,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: 'attractions',
+        redirectTo: 'travel-list',
         pathMatch: 'full'
       }
     ]

@@ -1,6 +1,7 @@
-<app-travel-header></app-travel-header>
+<app-travel-header [bgBanner]="'travel-list'"></app-travel-header>
 
 
+<!--熱門景點 區塊-->
 <div class="nowrap">
   <label class="subTitle">
     熱門景點
@@ -9,23 +10,6 @@
 </div>
 <div class="detail-attractions-info">
 
-  <!-- <div class='card' *ngFor="let item of data$ ; let idx =  index">
-    <div class='imgArea'>
-      <img src="assets/images/wet-place.png" alt="" srcset="">
-    </div>
-    <div class='card-position'>
-      <label for="">
-        臺中市 清水區
-        <img src="assets/images/google-position.png" alt="" srcset="">
-      </label>
-    </div>
-    <div class='card-title'>高美濕地_高美野生動物保護區</div>
-    <div class='card-open-time'>開放時間</div>
-    <div class='card-mark'>詳見官網或電話洽詢</div>
-    <div class='card-detail'><button>查看詳情</button></div>
-  </div> -->
-
-  <!--熱門景點 區塊-->
   <div class='card' *ngFor="let item of destinationDatas; let idx = Index">
     <div class='imgArea'>
       <img [src]="item.Picture.PictureUrl1" alt="" srcset="">
@@ -42,11 +26,11 @@
     <div class='card-detail'><button>查看詳情</button></div>
   </div>
 
-
 </div>
 <div class='more-attractions'>
   <a href="/#/popular-destination"><button>看更多熱門景點</button></a>
 </div>
+
 
 <!--熱門美食 區塊-->
 <div class="nowrap">
@@ -73,11 +57,11 @@
     <div class='card-detail'><button>查看詳情</button></div>
   </div>
 
-
 </div>
 <div class='more-attractions'>
   <a href="/#/popular-food"><button>看更多熱門美食</button></a>
 </div>
+
 
 <!--近期活動 區塊-->
 <div class="nowrap">
@@ -104,7 +88,6 @@
     <div class='card-mark'>{{ item.OpenTime}}</div>
     <div class='card-detail'><button>查看詳情</button></div>
   </div>
-
 
 </div>
 <div class='more-attractions'>
