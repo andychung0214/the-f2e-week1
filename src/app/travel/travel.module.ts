@@ -8,6 +8,7 @@ import { PopularDestinationComponent } from './popular-destination/popular-desti
 import { RecentActivitiesComponent } from './recent-activities/recent-activities.component';
 import { TravelDetailComponent } from './travel-detail/travel-detail.component';
 
+import { SharedMaterialModule } from '../shared-material/shared-material.module';
 
 @NgModule({
   declarations:
@@ -20,7 +21,8 @@ import { TravelDetailComponent } from './travel-detail/travel-detail.component';
     TravelDetailComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedMaterialModule
   ],
   exports:[TravelHeaderComponent]
 })

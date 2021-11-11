@@ -1,4 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
+export interface DialogData {
+  animal: string;
+  name: string;
+}
 
 @Component({
   selector: 'app-travel-header',
@@ -7,21 +13,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TravelHeaderComponent implements OnInit {
 
-  // cities = [
-  //   {id: '臺北市', name: 'Taipei'},
-  //   {id: 'NewTaipei', name: '新北市'},
-  //   {id: 'Taichung', name: '臺中市'}
-  // ]
+  animal: string;
+  name: string;
 
   @Input()
   bgBanner: string;
 
-  displayBanner= "url(assets/images/home-banner.png)";
-  // bgURL= "color: green";
+  displayBanner = "url(assets/images/home-banner.png)";
 
-
-
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
     if (this.bgBanner !== undefined && this.bgBanner !== "") {
@@ -39,6 +39,6 @@ export class TravelHeaderComponent implements OnInit {
           this.displayBanner = "url(assets/images/home-banner.png)";
           break;
       }
+    }
   }
-}
 }
