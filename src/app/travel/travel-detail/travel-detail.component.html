@@ -8,27 +8,28 @@
   <div id='detailInfo' *ngFor="let item of detailData">
     <div id='detailInfoArea'>
       <h1>{{ item.Name }}</h1>
-      <label id='category'>藝術與人文館所</label>
+      <label id='category'>{{ item.Class1}}</label>
     </div>
     <div id='detailMain'>
       <div>
       <img [src]="item.Picture.PictureUrl1"  alt="">
       </div>
       <div id='detalMainInfo'>
-        <p>資訊</p>
+        <h1>資訊</h1>
         <br>
-        <p>電話：</p>
+        <h2>電話：</h2>
         <p>{{ item.Phone  }}
           <a href=""><img src="assets/images/copy.png" alt=""></a>
           <a href=""><img src="assets/images/phone.png" alt=""></a>
         </p>
         <br>
-        <p>地址：</p>
+        <h2>地址：</h2>
         <p>{{ item.Address  }}
           <a href=""><img src="assets/images/position.png" alt=""></a>
         </p>
         <br>
-        <p>開放時間：{{ item.OpenTime  }}</p>
+        <h2>開放時間：</h2>
+        <p>{{ item.OpenTime  }}</p>
       </div>
     </div>
   </div>

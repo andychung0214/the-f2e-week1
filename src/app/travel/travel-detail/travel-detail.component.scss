@@ -136,7 +136,7 @@ background-size: cover;
 #detailMain{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 #category{
@@ -154,6 +154,12 @@ background-size: cover;
 
 #detalMainInfo{
   margin-left: 2%;
+}
+
+header,
+#detailInfo,
+#detailIntro{
+  padding: 0 2% 0 2%;
 }
 
 @media screen and (max-width: 992px) {
