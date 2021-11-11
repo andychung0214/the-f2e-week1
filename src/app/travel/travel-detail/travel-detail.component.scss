@@ -16,9 +16,9 @@
 
 #detailInfo{
   background-color:#E5E5E5;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: flex-start;
 }
 
 
@@ -125,11 +125,35 @@ background-size: cover;
 }
 
 
-.cardDetailInfo div{
+#cardDetailInfo div{
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 4%;
+}
+
+
+#detailMain{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#category{
+  width: 127px;
+  height: 21px;
+  left: 110px;
+  top: 242px;
+
+  background: #30638E;
+  border: 1px solid #FEFEFE;
+  color: #FFF;
+  margin: 0.4% 0;
+
+}
+
+#detalMainInfo{
+  margin-left: 2%;
 }
 
 @media screen and (max-width: 992px) {
@@ -142,7 +166,7 @@ background-size: cover;
     margin: 0 21px 0 21px;
     max-width: 1440px;
   }
-  #detailInfo{
+  #detailMain{
     background-color:#E5E5E5;
     display: flex;
     flex-direction: column;
@@ -151,7 +175,7 @@ background-size: cover;
 
 
 
-  #detailInfoArea img{
+  #detailMain img{
     max-width: 100%;
   }
 
@@ -172,6 +196,7 @@ background-size: cover;
     background: #30638E;
     border: 1px solid #FEFEFE;
     color: #FFF;
+    margin: 2% 0;
   }
 
 

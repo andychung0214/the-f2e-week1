@@ -5,39 +5,43 @@
     </a>
   </header>
   <hr>
-  <div id='detailInfo'>
+  <div id='detailInfo' *ngFor="let item of detailData">
     <div id='detailInfoArea'>
-      <h1>台北市立美術館</h1>
+      <h1>{{ item.Name }}</h1>
       <label id='category'>藝術與人文館所</label>
-      <img src="assets/images/art-gallery.png"  alt="">
     </div>
-    <div>
-      <p>資訊</p>
-      <br>
-      <p>電話：</p>
-      <p>02-25957656
-        <a href=""><img src="assets/images/copy.png" alt=""></a>
-        <a href=""><img src="assets/images/phone.png" alt=""></a>
-      </p>
-      <br>
-      <p>地址：</p>
-      <p>臺北市中山區中山北路三段181號
-        <a href=""><img src="assets/images/position.png" alt=""></a>
-      </p>
-      <br>
-      <p>開放時間：08:00-20:00</p>
+    <div id='detailMain'>
+      <div>
+      <img [src]="item.Picture.PictureUrl1"  alt="">
+      </div>
+      <div id='detalMainInfo'>
+        <p>資訊</p>
+        <br>
+        <p>電話：</p>
+        <p>{{ item.Phone  }}
+          <a href=""><img src="assets/images/copy.png" alt=""></a>
+          <a href=""><img src="assets/images/phone.png" alt=""></a>
+        </p>
+        <br>
+        <p>地址：</p>
+        <p>{{ item.Address  }}
+          <a href=""><img src="assets/images/position.png" alt=""></a>
+        </p>
+        <br>
+        <p>開放時間：{{ item.OpenTime  }}</p>
+      </div>
     </div>
   </div>
 
-  <div id='detailIntro'>
+  <div id='detailIntro' *ngFor="let item of detailData">
     <br>
     <div>
       <h1>介紹</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel laboriosam culpa ab dignissimos laudantium, sequi numquam modi corrupti impedit porro fugit harum, quidem esse rerum enim aut laborum voluptate quisquam commodi debitis distinctio aspernatur ex magni architecto. Iste repellendus deserunt eligendi non officiis illum eius perspiciatis ut saepe dolor perferendis nisi beatae laudantium similique veritatis nostrum, et quis veniam unde velit exercitationem, aliquam ad impedit. Maxime, impedit reiciendis aspernatur fuga eum officiis facere rem nulla magnam suscipit error accusantium. Voluptas quod nobis maxime voluptatem consequatur placeat velit, laudantium quo dignissimos hic explicabo blanditiis amet dolore quisquam facere inventore voluptate. Est!</p>
+      <p>{{ item.Description  }}</p>
     </div>
     <br>
     <h1>景點地圖</h1>
-    <h4>點擊以下按鈕搜尋</h4>
+    <h4 style='color:grey'>點擊以下按鈕搜尋</h4>
     <br>
     <div class='iconArea'>
       <img src="assets/images/near-resturaunt.png" alt="">
@@ -48,7 +52,7 @@
 
       <div class='googleMap'>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.587744406794!2d135.77265191541818!3d34.96694007641959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60010f14384c5a19%3A0x5d22970f58bfde17!2z5LyP6KaL56i76I235aSn56S-IOWNg-acrOmzpeWxhQ!5e0!3m2!1szh-TW!2stw!4v1634718270716!5m2!1szh-TW!2stw"
+          src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.587744406794!2d135.77265191541818!3d34.96694007641959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60010f14384c5a19%3A0x5d22970f58bfde17!2z5LyP6KaL56i76I235aSn56S-IOWNg-acrOmzpeWxhQ!5e0!3m2!1szh-TW!2stw!4v1634718270716!5m2!1szh-TW!2stw"
           width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
 
