@@ -9,7 +9,6 @@ import { LayoutComponent } from './layout/layout.component';
 
 import { TravelModule } from './travel/travel.module';
 
-
 import { SharedMaterialModule } from './shared-material/shared-material.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -21,10 +20,10 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedMaterialModule,
     NoopAnimationsModule,
     HttpClientModule,
-    TravelModule
+    TravelModule,
+    SharedMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

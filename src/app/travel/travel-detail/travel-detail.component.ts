@@ -18,6 +18,8 @@ export class TravelDetailComponent implements OnInit {
 
   googleMapUrl: string;
 
+  isShowDetail: true;
+
   getAuthorizationHeader() {
     var AppID = '7a3f2fb9ff044bfc90db2ea7880a4a35';
     var AppKey = '2upS4qQV2lxXNkviX2So4kpiPWQ';
