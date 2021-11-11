@@ -9,6 +9,7 @@ import { RecentActivitiesComponent } from './travel/recent-activities/recent-act
 import { PopularFoodComponent } from './travel/popular-food/popular-food.component';
 import { PopularDestinationComponent } from './travel/popular-destination/popular-destination.component';
 import { TravelHeaderComponent } from './travel/travel-header/travel-header.component';
+import { TravelDetailComponent } from './travel/travel-detail/travel-detail.component';
 
 const routes: Routes = [
   {
@@ -32,11 +33,24 @@ const routes: Routes = [
         component: RecentActivitiesComponent
       },
       {
+        path: 'travel-list/detail',
+        component: TravelDetailComponent
+      },
+      {
         path: '',
         redirectTo: 'travel-list',
         pathMatch: 'full'
       }
     ]
+  },
+  {
+    path: '',
+    component: TravelListComponent
+  },
+  {
+    path: "**",
+    redirectTo: 'travel-list',
+    pathMatch: 'full'
   }
 ];
 

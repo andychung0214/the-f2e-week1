@@ -1,0 +1,175 @@
+
+.container{
+  // margin:0 auto;
+  margin: 0 10% 0 10%;
+  max-width: 1440px;
+}
+
+.iconArea{
+  max-width: 100%;
+}
+
+.fontBold{
+  font-weight: bold;
+
+}
+
+#detailInfo{
+  background-color:#E5E5E5;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+
+#detailInfoArea{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#detailInfoArea img{
+  max-width: 804px;
+}
+
+
+#detailIntro{
+  background-color:#F5FDFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#detailContact{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  column-gap: 265px;
+}
+
+
+.card{
+  // position: absolute;
+  max-width: 366px;
+  // height: 515px;
+  // left: 101px;
+  // top: 743px;
+  // margin : 8%;
+
+  background: #FEFEFE;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: 2px solid #FEFEFE;
+}
+
+.card img{
+  max-width: 100%;
+}
+
+.imgArea{
+//   position: absolute;
+// width: 366px;
+// height: 251px;
+// left: 101px;
+// top: 743px;
+
+// background: url('../../../assets/images/wet-place.png');
+// border-radius: 15px 15px 0px 0px;
+background-size: cover;
+
+}
+
+.card-position,
+.card-title{
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #333333;
+}
+
+.card-open-time,
+.card-mark{
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #333333;
+}
+
+.card-detail button{
+  background: #2F798C;
+  border-radius: 20px;
+
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+
+  width: 219px;
+  height: 68px;
+}
+
+.cardDetailInfo
+{
+  display: grid;
+  gap:26px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
+
+
+.cardDetailInfo div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 4%;
+}
+
+
+@media screen and (max-width: 992px) {
+
+
+}
+@media screen and (max-width: 768px) {
+  .container{
+    // margin:0 auto;
+    margin: 0 21px 0 21px;
+    max-width: 1440px;
+  }
+  #detailInfo{
+    background-color:#E5E5E5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+
+
+  #detailInfoArea img{
+    max-width: 100%;
+  }
+
+  .iconArea{
+    display:grid;
+    gap:8px;
+    grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+
+  }
+  #category{
+    width: 116px;
+    height: 25px;
+    left: 41px;
+    top: 161px;
+
+    background: #30638E;
+    border: 1px solid #FEFEFE;
+    color: #FFF;
+  }
+}

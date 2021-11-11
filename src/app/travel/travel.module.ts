@@ -6,6 +6,7 @@ import { TravelListComponent } from './travel-list/travel-list.component';
 import { PopularFoodComponent } from './popular-food/popular-food.component';
 import { PopularDestinationComponent } from './popular-destination/popular-destination.component';
 import { RecentActivitiesComponent } from './recent-activities/recent-activities.component';
+import { TravelDetailComponent } from './travel-detail/travel-detail.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { RecentActivitiesComponent } from './recent-activities/recent-activities
     TravelListComponent,
     PopularFoodComponent,
     PopularDestinationComponent,
-    RecentActivitiesComponent
+    RecentActivitiesComponent,
+    TravelDetailComponent
   ],
   imports: [
     CommonModule

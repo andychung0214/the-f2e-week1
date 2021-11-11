@@ -1,13 +1,5 @@
 .logo{
-  max-width: 99px;
-  // position: absolute;
-  left: 8.44%;
-  right: 83.83%;
-  top: 27.88%;
-  bottom: 17.31%;
-
-  // position: absolute;
-  width: 70px;
+  width: 219px;
   height: 72px;
   left: 57px;
   top: 39px;
@@ -21,6 +13,8 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+
 
 .subTitle{
   // position: absolute;
@@ -71,24 +65,6 @@
   color: #FF1D6C
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
-#title{
-  font-family: 'Viga';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 30px;
-
-  // position: absolute;
-  max-width: 135px;
-  height: 30px;
-  left: 141px;
-  top: 60px;
-
-  color: #FFFFFF;
-
-  border: 0px solid #2F798C;
-}
 
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
@@ -146,8 +122,16 @@
 #btnFilter{
   background: #2F798C;
   border-radius: 100px;
-  min-width: 170px;
-  min-height: 68px;
+  width: 170px;
+  height: 68px;
+  cursor: pointer;
+}
+
+#btnFilter img{
+//   width: 84px;
+//   height: 26px;
+//   left: 1027px;
+// top: 335px;
 }
 
 
@@ -160,4 +144,31 @@
 
   background: #2F798C;
   border-radius: 100px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .wrapper{
+    // background-image: url('../../../assets/images/home-banner.png');
+    min-width: 100%;
+    min-height: 311px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #btnFilter{
+    background: #2F798C;
+  border-radius: 100px;
+  width: 6px;
+  height: 6px;
+  }
+
+  #searchKeyword{
+    width: 258px;
+    height: 42px;
+  }
+  #btnSearch{
+    display: none;
+  }
 }
