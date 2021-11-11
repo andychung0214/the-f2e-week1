@@ -140,6 +140,13 @@
   border-radius: 100px;
 }
 
+.mFilter{
+  display: none;
+}
+
+.dFilter{
+  display:inline;
+}
 
 @media screen and (max-width: 768px) {
   .wrapper{
@@ -165,4 +172,13 @@
   #btnSearch{
     display: none;
   }
+
+  .dFilter{
+    display: none;
+  }
+
+  .mFilter{
+    display: inline;
+  }
+
 }

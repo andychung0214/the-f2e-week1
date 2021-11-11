@@ -20,6 +20,8 @@ export class TravelDetailComponent implements OnInit {
 
   isShowDetail: true;
 
+  nearAPI: 'https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?$top=30&$spatialFilter=nearby(25.056400299072266%2C%20121.50760650634766%2C%20600)&$format=JSON';
+
   getAuthorizationHeader() {
     var AppID = '7a3f2fb9ff044bfc90db2ea7880a4a35';
     var AppKey = '2upS4qQV2lxXNkviX2So4kpiPWQ';
