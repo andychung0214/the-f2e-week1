@@ -132,7 +132,6 @@ background-size: cover;
   margin: 4%;
 }
 
-
 @media screen and (max-width: 992px) {
 
 
@@ -157,9 +156,11 @@ background-size: cover;
   }
 
   .iconArea{
-    display:grid;
-    gap:8px;
-    grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    // gap:8px;
+    // grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
 
   }
   #category{
@@ -172,4 +173,10 @@ background-size: cover;
     border: 1px solid #FEFEFE;
     color: #FFF;
   }
+
+
+.googleMap{
+ display: none;
+}
+
 }

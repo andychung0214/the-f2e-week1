@@ -153,7 +153,7 @@ border-radius: 15px 15px 0px 0px;
   margin: 4%;
 
   color: #2F798C;
-  max-width: 765px;
+  width: 765px;
   padding:1%;
 }
 
@@ -193,6 +193,8 @@ line-height: 38px;
 }
 
 
+
+
 @media screen and (max-width: 992px) {
 
 
@@ -223,4 +225,25 @@ line-height: 38px;
   margin-top: 6%;
   margin-bottom: 50px;
 }
+
+.more-attractions button{
+  border: 3px solid #2F798C;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 29px;
+  /* identical to box height */
+
+  margin: 4%;
+
+  color: #2F798C;
+  width: 156px;
+  padding:1%;
+}
+
+
 }
