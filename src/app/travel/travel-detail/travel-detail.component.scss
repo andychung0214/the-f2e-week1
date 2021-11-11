@@ -5,9 +5,6 @@
   max-width: 1440px;
 }
 
-.iconArea{
-  max-width: 100%;
-}
 
 .fontBold{
   font-weight: bold;
@@ -125,7 +122,7 @@ background-size: cover;
 }
 
 
-#cardDetailInfo div{
+.card div{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,7 +137,7 @@ background-size: cover;
 }
 
 #category{
-  width: 127px;
+  width: max-content;
   height: 21px;
   left: 110px;
   top: 242px;
@@ -160,6 +157,20 @@ header,
 #detailInfo,
 #detailIntro{
   padding: 0 2% 0 2%;
+}
+
+.iconArea{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  // gap:8px;
+  // grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+  max-width: 100%;
+
+}
+
+.mIconArea{
+  display: none;
 }
 
 @media screen and (max-width: 992px) {
@@ -186,15 +197,18 @@ header,
   }
 
   .iconArea{
+    display: none;
+  }
+
+  .mIconArea{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
-    // gap:8px;
-    // grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
-
+    max-width: 100%;
   }
+
   #category{
-    width: 116px;
+    width: max-content;
     height: 25px;
     left: 41px;
     top: 161px;
@@ -208,6 +222,34 @@ header,
 
 .googleMap{
  display: none;
+}
+
+h1{
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h2{
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #333333;
+}
+
+p{
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #000000;
 }
 
 }
