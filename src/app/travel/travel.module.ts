@@ -10,6 +10,8 @@ import { TravelDetailComponent } from './travel-detail/travel-detail.component';
 
 import { SharedMaterialModule } from '../shared-material/shared-material.module';
 
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 @NgModule({
   declarations:
   [
@@ -22,6 +24,8 @@ import { SharedMaterialModule } from '../shared-material/shared-material.module'
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     SharedMaterialModule
   ],
   exports:[TravelHeaderComponent]

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http'
 import { HmacSHA1, enc } from 'crypto-js';
+import { DataService } from '../data.service';
 
 
 @Component({
@@ -36,7 +37,7 @@ export class TravelDetailComponent implements OnInit {
 
   private _headers = { headers: this.getAuthorizationHeader() };
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) {
+  constructor(private route: ActivatedRoute, public datasvc: DataService) {
 
     this.route.queryParams.subscribe(params => {
       this.params1 = params['id'];
@@ -62,10 +63,10 @@ export class TravelDetailComponent implements OnInit {
         break;
     }
 
-    http.get(this.httpURL ,this._headers).subscribe(result => {
-      console.log('headers=', this._headers)
+    this.datasvc.getDetailData(this.httpURL).subscribe(result => {
       this.detailData= result;
     })
+
   }
 
   ngOnInit() {

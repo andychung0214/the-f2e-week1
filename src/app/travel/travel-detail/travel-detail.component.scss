@@ -162,7 +162,7 @@ header,
 .iconArea{
   display:flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   // gap:8px;
   // grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
   max-width: 100%;

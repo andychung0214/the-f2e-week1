@@ -14,14 +14,19 @@
       name="searchKeyword"
       id="searchKeyword"
       placeholder="&#xF002;請輸入關鍵字"
-      style="font-family:Arial, FontAwesome"  >
+      style="font-family:Arial, FontAwesome"
+      [formControl]="seacrchingInputControl">
       <!-- <img src="assets/images/magnifier.png" alt=""> -->
       <div id='btnFilter'>
-        <img class='dFilter' src='assets/images/filter.png'>
-        <img class='mFilter' src='assets/images/m-filter.png'>
+        <button (click)="openDialog()">
+          <img class='dFilter' src='assets/images/filter.png'>
+        </button>
+        <button (click)="openDialog()">
+          <img class='mFilter' src='assets/images/m-filter.png'>
+        </button>
       </div>
     </div>
-    <button id='btnSearch' class="main-btn">搜尋</button>
+    <button id='btnSearch' class="main-btn" (click)="searchByKeyword(inputKeyword)">搜尋</button>
     <select name="" id="selCity"  >
       <option value=""></option>
       <option  value="臺北市">Taipei</option>
