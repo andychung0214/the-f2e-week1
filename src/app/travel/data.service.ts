@@ -28,9 +28,7 @@ export class DataService {
   }
 
   getKeywordData(url: string){
-    return this.http.get(url).subscribe(value => {
-
-    });
+    return this.http.get(url,this._headers)
   }
 
   getDestindaionData(){

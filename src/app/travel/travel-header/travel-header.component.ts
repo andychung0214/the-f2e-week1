@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { DataService } from './../data.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
@@ -19,6 +20,12 @@ export interface DialogData {
 })
 export class TravelHeaderComponent implements OnInit {
 
+  data$: Observable<any>;
+
+  destinationDatas;
+  foodDatas;
+  activitiesDatas;
+
   animal: string;
   name: string;
 
@@ -30,9 +37,17 @@ export class TravelHeaderComponent implements OnInit {
   @Input()
   bgBanner: string;
 
+  @Output()
+  searchDestinationKeyword = new EventEmitter<any>();
+
+  @Output()
+  searchFoodKeyword = new EventEmitter<any>();
+
+  @Output()
+  searchActivityKeyword = new EventEmitter<any>();
+
   displayBanner = "url(assets/images/home-banner.png)";
 
-  data$: Observable<any>;
 
   constructor(public dialog: MatDialog, public datasvc: DataService) { }
 
@@ -55,18 +70,37 @@ export class TravelHeaderComponent implements OnInit {
     }
 
     this.seacrchingInputControl.valueChanges.subscribe((value) => {
-      console.log(value);
+      // console.log(value);
       this.inputKeyword = value;
     })
   }
 
 
   searchByKeyword(keyword: string): void{
-    let url = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot/Taipei?$format=JSON'
-    if (this.inputKeyword) {
-      url += `&$filter=contains(Name, '${this.inputKeyword}')`;
-    };
+    let destinatioUrl = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?$format=JSON'
+    let foodUrl = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/Restaurant?$format=JSON'
+    let activitiesUrl = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity?$format=JSON'
 
+    if (this.inputKeyword) {
+      destinatioUrl += `&$filter=contains(Name, '${this.inputKeyword}')`;
+      this.datasvc.getKeywordData(destinatioUrl).subscribe(result => {
+        this.destinationDatas = result;
+      })
+
+      foodUrl += `&$filter=contains(Name, '${this.inputKeyword}')`;
+      this.datasvc.getKeywordData(foodUrl).subscribe(fResult => {
+        this.foodDatas = fResult;
+      })
+
+      activitiesUrl += `&$filter=contains(Name, '${this.inputKeyword}')`;
+      this.datasvc.getKeywordData(activitiesUrl).subscribe(aResult => {
+        this.activitiesDatas = aResult;
+      })
+
+      this.searchDestinationKeyword.emit(this.destinationDatas);
+      this.searchFoodKeyword.emit(this.foodDatas);
+      this.searchActivityKeyword.emit(this.activitiesDatas);
+    };
   }
 
   openDialog(): void {

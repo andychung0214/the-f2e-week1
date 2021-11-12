@@ -36,4 +36,16 @@ export class TravelListComponent implements OnInit {
 
   ngOnInit() {}
 
+  doSearchDestinationDatas(searchData){
+    this.destinationDatas = searchData;
+  }
+
+  doSearchFood(searchFoodata){
+    this.foodDatas = searchFoodata;
+  }
+
+  doSearchActivity(searchActivityData){
+    this.activitiesDatas = searchActivityData;
+  }
+
 }
