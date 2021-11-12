@@ -1,0 +1,39 @@
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 30px;
+}
+
+html, body {
+  height: 100%;
+}
+
+
+#travelArea{
+  display: grid;
+  gap:26px;
+  grid-template-columns: repeat(auto-fit, minmax(144px, 2fr));
+  // margin-top: 4%;
+  margin-bottom: 50px;
+}
+
+#btnSearch{
+  width: 219px;
+height: 68px;
+// left: 694px;
+// top: 1110px;
+
+background: #2F798C;
+border-radius: 100px;
+};
+
+span{
+  font-family: 'SF Pro Text';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 21px;
+text-align: center;
+
+color: #333333;
+}

@@ -107,7 +107,8 @@ export class TravelHeaderComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(MatDialogComponentComponent, {
-      width: '250px',
+      width: '843px',
+      height: '790px',
       data: {name: this.name, animal: this.animal},
     });
 
