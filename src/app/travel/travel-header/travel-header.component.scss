@@ -1,8 +1,25 @@
-.logo{
-  width: 219px;
-  height: 72px;
-  left: 57px;
-  top: 39px;
+#imgLogo{
+  display: block;
+  margin-left: 57px;
+  margin-top: 39px;
+}
+
+#m-imgLogo{
+  display: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+#logoTitle{
+  margin-left: 14px;
+  margin-top: 62px;
+  font-family: 'Viga', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 30px;
+
+  color: #FFFFFF;
+  border: 0px solid #2F798C;
 }
 
 .wrapper{
@@ -41,6 +58,7 @@
   // margin-top: 10%;
   // padding-top: 16%;
 }
+@import url(//db.onlinewebfonts.com/c/1c45e28f8e86cc89876f003b953cc3e9?family=SF+Pro+Text);
 
 .home-content p{
   font-style: 1.125rem;
@@ -72,7 +90,7 @@
 /*標題*/
 .page-title{
   font-size: 42px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "SF Pro Text", sans-serif;
   text-transform: uppercase;
   font-weight: normal;
   // position: absolute;
@@ -122,8 +140,8 @@
 #btnFilter{
   background: #2F798C;
   border-radius: 100px;
-  width: 170px;
-  height: 68px;
+  // width: 170px;
+  // height: 68px;
   cursor: pointer;
 }
 
@@ -180,7 +198,39 @@
   }
 
   .mFilter{
-    display: inline;
+    display: block;
+  }
+
+  #imgLogo{
+    display: none;
+  }
+
+  #m-imgLogo{
+    display: block;
+    margin-left: 11px;
+    margin-top: 27px;
+  }
+
+  #logoTitle{
+    margin-left: 4px;
+    margin-top: 38px;
+
+    font-family: 'Viga';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #FFFFFF;
+    border: 0px solid #2F798C;
+  }
+
+  .home-content{
+    max-width: 100%;
+    margin: 0 auto;
+    color: #FFF;
+    text-align: center;
+    margin-top: 44px;
   }
 
 }
