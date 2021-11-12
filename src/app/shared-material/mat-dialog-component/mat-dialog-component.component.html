@@ -4,10 +4,10 @@
     <div id='travelCategory'>
       <h1>分類</h1>
       <mat-form-field appearance="fill">
-        <mat-select [formControl]="categoryControl" required>
+        <mat-select [formControl]="categoryControl" [(ngModel)]="data.viewValue" required>
           <mat-option>分類</mat-option>
           <mat-option *ngFor="let item of categoryList" [value]="item">
-            {{item.value}}
+            {{item.viewValue}}
           </mat-option>
         </mat-select>
         <mat-error *ngIf="categoryControl.hasError('required')">Please choose an animal</mat-error>
@@ -21,7 +21,7 @@
         <mat-select [formControl]="taipeiControl" required>
           <mat-option>選擇縣市</mat-option>
           <mat-option *ngFor="let item of taipeiList" [value]="item">
-            {{item.value}}
+            {{item.viewValue}}
           </mat-option>
         </mat-select>
         <mat-error *ngIf="taipeiControl.hasError('required')">Please choose an animal</mat-error>
@@ -33,7 +33,7 @@
         <mat-select [formControl]="centralControl" required>
           <mat-option>選擇縣市</mat-option>
           <mat-option *ngFor="let item of centralList" [value]="item">
-            {{item.value}}
+            {{item.viewValue}}
           </mat-option>
         </mat-select>
         <mat-error *ngIf="centralControl.hasError('required')">Please choose an animal</mat-error>
@@ -57,7 +57,7 @@
         <mat-select [formControl]="eastControl" required>
           <mat-option>選擇縣市</mat-option>
           <mat-option *ngFor="let item of eastList" [value]="item">
-            {{item.value}}
+            {{item.viewValue}}
           </mat-option>
         </mat-select>
         <mat-error *ngIf="eastControl.hasError('required')">Please choose an animal</mat-error>
@@ -69,7 +69,7 @@
         <mat-select [formControl]="outIslandControl" required>
           <mat-option>選擇縣市</mat-option>
           <mat-option *ngFor="let item of outIslandList" [value]="item">
-            {{item.value}}
+            {{item.viewValue}}
           </mat-option>
         </mat-select>
         <mat-error *ngIf="outIslandControl.hasError('required')">Please choose an animal</mat-error>
@@ -81,7 +81,12 @@
   <div mat-dialog-actions>
     <!-- <button mat-button (click)="onNoClick()">No Thanks</button> -->
     <!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
-    <button mat-button  id='btnSearch' class="main-btn" (click)="searchByKeyword('inputKeyword')">搜尋</button>
+    <button mat-button  id='btnSearch'
+    class="main-btn"
+    [mat-dialog-close]="data.viewValue"
+    cdkFocusInitial
+    (click)="searchByKeyword('inputKeyword')" color='primary'>搜尋</button>
+    <button mat-button mat-dialog-close color='warn'>取消</button>
   </div>
 </div>
 

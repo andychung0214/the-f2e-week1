@@ -13,6 +13,16 @@ export interface DialogData {
   name: string;
 }
 
+interface Category{
+  value: string;
+  viewValue: string;
+}
+
+interface Area{
+  value: string;
+  viewValue: string;
+}
+
 @Component({
   selector: 'app-travel-header',
   templateUrl: './travel-header.component.html',
@@ -21,6 +31,9 @@ export interface DialogData {
 export class TravelHeaderComponent implements OnInit {
 
   data$: Observable<any>;
+
+  value:string;
+  viewValue:string;
 
   destinationDatas;
   foodDatas;
@@ -34,6 +47,7 @@ export class TravelHeaderComponent implements OnInit {
   searchUrl: string;
   seacrchingInputControl = new FormControl();
 
+  selectCategory:string;
   @Input()
   bgBanner: string;
 
@@ -109,12 +123,15 @@ export class TravelHeaderComponent implements OnInit {
     const dialogRef = this.dialog.open(MatDialogComponentComponent, {
       width: '843px',
       height: '790px',
-      data: {name: this.name, animal: this.animal},
+      data: {value: this.value, viewValue: this.viewValue},
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      this.animal = result;
+      console.log('this.selectCategory=',this.selectCategory);
+      console.log('result=',result);
+
+      this.selectCategory = result;
     });
   }
 
