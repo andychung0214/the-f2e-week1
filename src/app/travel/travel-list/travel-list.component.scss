@@ -69,13 +69,7 @@
 
 /* Card Start */
 .card{
-  // position: absolute;
   max-width: 366px;
-  // height: 515px;
-  // left: 101px;
-  // top: 743px;
-  // margin : 8%;
-
   background: #FEFEFE;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
@@ -150,7 +144,7 @@ border-radius: 15px 15px 0px 0px;
   line-height: 29px;
   /* identical to box height */
 
-  margin: 4%;
+  margin: 2%;
 
   color: #2F798C;
   width: 765px;
@@ -165,7 +159,7 @@ border-radius: 15px 15px 0px 0px;
   display: grid;
   gap:26px;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  margin-top: 6%;
+  // margin-top: 4%;
   margin-bottom: 50px;
 }
 
@@ -176,7 +170,7 @@ border-radius: 15px 15px 0px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 4%;
+  margin: 2%;
 }
 
 .nowrap{
@@ -184,7 +178,7 @@ border-radius: 15px 15px 0px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 4%;
+  margin: 2%;
   font-family: SF Pro Text;
 font-style: normal;
 font-weight: bold;
@@ -222,7 +216,7 @@ line-height: 38px;
   display: grid;
   gap:26px;
   grid-template-columns: repeat(auto-fit, minmax(174px, 1fr));
-  margin-top: 6%;
+  margin-top: 2%;
   margin-bottom: 50px;
 }
 
@@ -236,9 +230,6 @@ line-height: 38px;
   font-weight: 600;
   font-size: 14px;
   line-height: 29px;
-  /* identical to box height */
-
-  margin: 4%;
 
   color: #2F798C;
   width: 156px;

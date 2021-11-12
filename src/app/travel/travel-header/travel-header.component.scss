@@ -98,7 +98,7 @@
 
 
 #searchKeyword{
-  // position: absolute;
+  font-size: 24px;
   width: 445px;
   height: 40px;
   // left: 395px;
@@ -130,7 +130,7 @@
 
 
 #btnSearch{
-  // position: absolute;
+  font-size: 22px;
   width: 219px;
   height: 68px;
   left: 611px;
@@ -168,6 +168,7 @@
   #searchKeyword{
     width: 258px;
     height: 42px;
+    font-size: 14px;
   }
   #btnSearch{
     display: none;

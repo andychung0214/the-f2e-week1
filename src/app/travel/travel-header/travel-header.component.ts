@@ -77,9 +77,9 @@ export class TravelHeaderComponent implements OnInit {
 
 
   searchByKeyword(keyword: string): void{
-    let destinatioUrl = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?$format=JSON'
-    let foodUrl = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/Restaurant?$format=JSON'
-    let activitiesUrl = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity?$format=JSON'
+    let destinatioUrl = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?$top=8&$format=JSON'
+    let foodUrl = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/Restaurant?$top=8&$format=JSON'
+    let activitiesUrl = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity?$top=8&$format=JSON'
 
     console.log('this.inputKeyword=', this.inputKeyword)
     if (this.inputKeyword) {
