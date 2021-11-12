@@ -1,3 +1,33 @@
-<app-travel-header [bgBanner]="'popular-destination'"></app-travel-header>
+<app-travel-header
+  [bgBanner]="'popular-destination'">
+  (searchDestinationKeyword)="doSearchDestinationDatas($event)"
+</app-travel-header>
 
-<p>popular-destination works!</p>
+<div class="nowrap">
+  <label class="subTitle">
+    熱門景點
+  <img src="assets/images/fire.png" alt="" srcset="">
+  </label>
+</div>
+<div class="detail-attractions-info">
+
+  <div class='card' *ngFor="let item of destinationDatas$|async; let idx = Index">
+    <div class='imgArea'>
+      <img [src]="item.Picture.PictureUrl1" alt="" srcset="">
+    </div>
+    <div class='card-position'>
+      <label for="">
+        <img src="assets/images/google-position.png">
+        {{item.City}}
+      </label>
+    </div>
+    <div class='card-title'>{{ item.Name }}</div>
+    <div class='card-open-time'>開放時間</div>
+    <div class='card-mark'>{{ item.OpenTime}}</div>
+    <div class='card-detail'>
+      <a href="/the-f2e-week1/#/travel-list/detail?id={{ item.ID }}&category=popular-destination" >
+        <button>查看詳情</button>
+      </a>
+    </div>
+  </div>
+</div>

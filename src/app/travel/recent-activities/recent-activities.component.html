@@ -1,3 +1,37 @@
-<app-travel-header [bgBanner]="'recent-activities'"></app-travel-header>
+<app-travel-header
+  [bgBanner]="'recent-activities'"
+  (searchActivityKeyword)="doSearchActivity($event)">
+</app-travel-header>
 
-<p>recent-activities works!</p>
+<div class="nowrap">
+  <label class="subTitle">
+    近期活動
+  <img src="assets/images/event.png" alt="" srcset="">
+  </label>
+
+</div>
+<div class="detail-activities-info">
+
+  <div class='card' *ngFor="let item of activitiesDatas$|async; let idx = Index">
+    <div class='imgArea'>
+      <img [src]="item.Picture.PictureUrl1" style="max-width: 100%; ">
+    </div>
+    <div class='card-position'>
+      <label for="">
+        <img src="assets/images/google-position.png">
+        {{item.City}}
+      </label>
+    </div>
+    <div class='card-title'>{{ item.Name }}</div>
+    <div class='card-open-time'>活動時間</div>
+    <div class='card-mark'>{{ item.OpenTime}}</div>
+    <div class='card-detail'><a href="/the-f2e-week1/#/travel-list/detail?id={{ item.ID }}&category=recent-activities">
+      <button>查看詳情</button>
+    </a>
+  </div>
+  </div>
+
+</div>
+<div class='more-attractions'>
+  <a href="/the-f2e-week1/#/recent-activities"><button>Page</button></a>
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-popular-destination',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./popular-destination.component.scss']
 })
 export class PopularDestinationComponent implements OnInit {
+  destinationDatas$:Observable<any>;
 
-  constructor() { }
+  constructor(public datasvc: DataService) { }
 
   ngOnInit() {
+    this.destinationDatas$ = this.datasvc.getAllDestindaionData();
+
+  }
+
+  doSearchDestinationDatas(searchData){
+    console.log('searchData=',searchData)
+    this.destinationDatas$ = searchData;
   }
 
 }

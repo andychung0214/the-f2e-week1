@@ -1,0 +1,235 @@
+
+
+.button{
+  font-size: 5rem;
+  background: #0bd;
+  color: #fff;
+  border-radius: 5px;
+  padding: 18px 32px;
+}
+
+.button:hover{
+  background: #0090aa;
+}
+
+.home-content{
+  // background-image: url('../../assets/images/attractions-banner.png');
+  // min-height: 100vh;
+  min-height: 536px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+#selCategory,
+#selCity{
+  color:#0D0B0C;
+  width: 219px;
+  height: 40px;
+  background-color: #fff;
+  box-shadow: 0px 4px 3px rgba(13, 11, 12, 0.2);
+  border-radius: 6px;
+  padding: 8px 16px 16px 16px
+}
+
+
+
+/*下拉式選單 箭頭樣式*/
+.pretty-select {
+  /*移除箭頭樣式*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+
+  /*改變右邊箭頭樣式*/
+  // background: url('../../assets/images/arrow-down.png') no-repeat right center transparent;
+
+  border:0px;
+  width:100%;
+  height:34px;
+  padding-left:2px;
+  padding-right:40px;
+  background-color:#F6F7F7;
+  color:gray;
+}
+
+/*IE隱藏箭頭樣式*/
+.pretty-select::-ms-expand {
+  display: none;
+}
+
+.pretty-select:focus{
+  box-shadow: 0 0 5px 2px #467BF4;
+}
+
+
+
+/* Card Start */
+.card{
+  max-width: 366px;
+  background: #FEFEFE;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: 2px solid #FEFEFE;
+}
+
+.card img{
+  max-width: 100%;
+}
+
+.imgArea{
+border-radius: 15px 15px 0px 0px;
+}
+
+.card-position,
+.card-title{
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #333333;
+}
+
+.card-open-time,
+.card-mark{
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #333333;
+}
+
+.card-detail button{
+  background: #2F798C;
+  border-radius: 20px;
+
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+
+  width: 219px;
+  height: 68px;
+}
+
+
+/* Card End */
+
+.more-attractions{
+  text-align: center;
+}
+
+
+.more-attractions button{
+  border: 3px solid #2F798C;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+
+  margin: 2%;
+
+  color: #2F798C;
+  width: 765px;
+  padding:1%;
+}
+
+
+.detail-attractions-info,
+.detail-food-info,
+.detail-activities-info
+{
+  display: grid;
+  gap:26px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  // margin-top: 4%;
+  margin-bottom: 50px;
+}
+
+
+.detail-attractions-info div,
+.detail-food-info div,
+.detail-activities-info div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2%;
+}
+
+.nowrap{
+  white-space:nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2%;
+  font-family: SF Pro Text;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 38px;
+}
+
+
+@media screen and (max-width: 992px) {
+
+
+}
+@media screen and (max-width: 768px) {
+  .card-detail button{
+    background: #2F798C;
+    border-radius: 20px;
+
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+
+    width: 126.24px;
+    height: 68px;
+  }
+
+  .detail-attractions-info,
+.detail-food-info,
+.detail-activities-info
+{
+  display: grid;
+  gap:26px;
+  grid-template-columns: repeat(auto-fit, minmax(174px, 1fr));
+  margin-top: 2%;
+  margin-bottom: 50px;
+}
+
+.more-attractions button{
+  border: 3px solid #2F798C;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 29px;
+
+  color: #2F798C;
+  width: 156px;
+  padding:1%;
+}
+
+
+}

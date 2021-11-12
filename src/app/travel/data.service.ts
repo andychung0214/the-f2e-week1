@@ -43,6 +43,18 @@ export class DataService {
     return this.http.get('https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity/Taipei?$top=8&$format=JSON',this._headers)
   }
 
+  getAllDestindaionData(){
+    return this.http.get('https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot/Taipei?&$format=JSON',this._headers)
+  }
+
+  getAllFoodData(){
+    return this.http.get('https://ptx.transportdata.tw/MOTC/v2/Tourism/Restaurant/Taichung?&$format=JSON',this._headers)
+  }
+
+  getAllEventsData(){
+    return this.http.get('https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity/Taipei?&$format=JSON',this._headers)
+  }
+
   getDetailData(url: string){
     return this.http.get(url, this._headers);
   }

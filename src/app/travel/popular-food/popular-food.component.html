@@ -1,3 +1,38 @@
-<app-travel-header [bgBanner]="'popular-food'"></app-travel-header>
+<app-travel-header
+  [bgBanner]="'popular-food'">
+  (searchFoodKeyword)="doSearchFood($event)"
+</app-travel-header>
 
-<p>popular-food works!</p>
+<!--熱門美食 區塊-->
+<div class="nowrap">
+  <label class="subTitle">
+    熱門美食
+  <img src="assets/images/restaurant.png" alt="" srcset="">
+  </label>
+</div>
+<div class="detail-food-info">
+
+  <div class='card' *ngFor="let item of foodDatas$|async; let idx = Index">
+    <div class='imgArea'>
+      <img [src]="item.Picture.PictureUrl1" style="max-width: 100%; ">
+    </div>
+    <div class='card-position'>
+      <label for="">
+        <img src="assets/images/google-position.png">
+        {{item.City}}
+      </label>
+    </div>
+    <div class='card-title'>{{ item.Name }}</div>
+    <div class='card-open-time'>開放時間</div>
+    <div class='card-mark'>{{ item.OpenTime}}</div>
+    <div class='card-detail'>
+      <a href="/the-f2e-week1/#/travel-list/detail?id={{ item.ID }}&category=popular-food">
+        <button>查看詳情</button>
+      </a>
+    </div>
+  </div>
+
+</div>
+<div class='more-attractions'>
+  <a href="/the-f2e-week1/#/popular-food"><button>Page</button></a>
+</div>
