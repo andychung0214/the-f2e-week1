@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http'
-import { HmacSHA1, enc } from 'crypto-js';
 import { DataService } from '../data.service';
 
 
@@ -23,19 +21,6 @@ export class TravelDetailComponent implements OnInit {
 
   nearAPI: 'https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?$top=30&$spatialFilter=nearby(25.056400299072266%2C%20121.50760650634766%2C%20600)&$format=JSON';
 
-  getAuthorizationHeader() {
-    var AppID = '7a3f2fb9ff044bfc90db2ea7880a4a35';
-    var AppKey = '2upS4qQV2lxXNkviX2So4kpiPWQ';
-
-    var today = new Date();
-    var GMTString = today.toUTCString();
-    var hmacString = HmacSHA1("x-date: " + GMTString, AppKey).toString(enc.Base64);
-
-    var Authorization = 'hmac username=\"' + AppID + '\", algorithm=\"hmac-sha1\", headers=\"x-date\", signature=\"' + hmacString + '\"';
-    return { 'Authorization': Authorization, 'x-date': GMTString};
-  }
-
-  private _headers = { headers: this.getAuthorizationHeader() };
 
   constructor(private route: ActivatedRoute, public datasvc: DataService) {
 
