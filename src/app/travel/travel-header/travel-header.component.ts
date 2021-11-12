@@ -81,6 +81,7 @@ export class TravelHeaderComponent implements OnInit {
     let foodUrl = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/Restaurant?$format=JSON'
     let activitiesUrl = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity?$format=JSON'
 
+    console.log('this.inputKeyword=', this.inputKeyword)
     if (this.inputKeyword) {
       destinatioUrl += `&$filter=contains(Name, '${this.inputKeyword}')`;
       this.datasvc.getKeywordData(destinatioUrl).subscribe(result => {
@@ -97,10 +98,11 @@ export class TravelHeaderComponent implements OnInit {
         this.activitiesDatas = aResult;
       })
 
-      this.searchDestinationKeyword.emit(this.destinationDatas);
-      this.searchFoodKeyword.emit(this.foodDatas);
-      this.searchActivityKeyword.emit(this.activitiesDatas);
+      this.searchDestinationKeyword.emit(this.datasvc.getKeywordData(destinatioUrl));
+      this.searchFoodKeyword.emit(this.datasvc.getKeywordData(foodUrl));
+      this.searchActivityKeyword.emit(this.datasvc.getKeywordData(activitiesUrl));
     };
+
   }
 
   openDialog(): void {

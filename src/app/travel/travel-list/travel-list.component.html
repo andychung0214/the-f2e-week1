@@ -1,4 +1,3 @@
-<mat-hint>簡單介紹一下你的興趣吧！</mat-hint>
 <app-travel-header [bgBanner]="'travel-list'"
 (searchDestinationKeyword)="doSearchDestinationDatas($event)"
 (searchFoodKeyword)="doSearchFood($event)"
@@ -13,7 +12,7 @@
 </div>
 <div class="detail-attractions-info">
 
-  <div class='card' *ngFor="let item of destinationDatas; let idx = Index">
+  <div class='card' *ngFor="let item of destinationDatas$|async; let idx = Index">
     <div class='imgArea'>
       <img [src]="item.Picture.PictureUrl1" alt="" srcset="">
     </div>
@@ -48,7 +47,7 @@
 </div>
 <div class="detail-food-info">
 
-  <div class='card' *ngFor="let item of foodDatas; let idx = Index">
+  <div class='card' *ngFor="let item of foodDatas$|async; let idx = Index">
     <div class='imgArea'>
       <img [src]="item.Picture.PictureUrl1" style="max-width: 100%; ">
     </div>
@@ -84,7 +83,7 @@
 </div>
 <div class="detail-activities-info">
 
-  <div class='card' *ngFor="let item of activitiesDatas; let idx = Index">
+  <div class='card' *ngFor="let item of activitiesDatas$|async; let idx = Index">
     <div class='imgArea'>
       <img [src]="item.Picture.PictureUrl1" style="max-width: 100%; ">
     </div>

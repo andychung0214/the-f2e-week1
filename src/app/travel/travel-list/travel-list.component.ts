@@ -14,38 +14,30 @@ export class TravelListComponent implements OnInit {
 
   data$ : Observable<any>;
 
-  destinationDatas;
-  foodDatas;
-  activitiesDatas;
+  destinationDatas$:Observable<any>;
+  foodDatas$: Observable<any>;
+  activitiesDatas$: Observable<any>;
 
+  constructor(public datasvc: DataService) {}
 
-  constructor(public datasvc: DataService) {
+  ngOnInit() {
 
-    this.datasvc.getDestindaionData().subscribe(result => {
-      this.destinationDatas = result;
-    })
-
-    this.datasvc.getFoodData().subscribe(result => {
-      this.foodDatas = result;
-    })
-
-    this.datasvc.getEventsData().subscribe(result => {
-      this.activitiesDatas = result;
-    })
+    this.destinationDatas$ = this.datasvc.getDestindaionData();
+    this.foodDatas$ =   this.datasvc.getFoodData();
+    this.activitiesDatas$ = this.datasvc.getEventsData();
   }
 
-  ngOnInit() {}
 
   doSearchDestinationDatas(searchData){
-    this.destinationDatas = searchData;
+    this.destinationDatas$ = searchData;
   }
 
   doSearchFood(searchFoodata){
-    this.foodDatas = searchFoodata;
+    this.foodDatas$ = searchFoodata;
   }
 
   doSearchActivity(searchActivityData){
-    this.activitiesDatas = searchActivityData;
+    this.activitiesDatas$ = searchActivityData;
   }
 
 }
