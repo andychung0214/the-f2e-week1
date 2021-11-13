@@ -34,7 +34,13 @@
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
       </mat-form-field>
     </div> -->
-    <button id='btnSearch' class="main-btn" (click)="searchByKeyword(inputKeyword)">搜尋</button>
+    <!-- <button id='btnSearch' class="main-btn" (keyup.enter) (click)="searchByKeyword(inputKeyword)">搜尋</button> -->
+    <input id='btnSearch'
+    class="main-btn"
+    (keyup)="($event.which === 13)?searchByKeyword(inputKeyword):0"
+    (click)="searchByKeyword(inputKeyword)"
+
+      type="button" value="搜尋">
     <select name="" id="selCity"  >
       <option value=""></option>
       <option  value="臺北市">Taipei</option>

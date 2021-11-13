@@ -1,78 +1,78 @@
-<div>
+<div class='dialogStyle'>
 
   <div mat-dialog-content>
     <div id='travelCategory'>
       <h1>分類</h1>
       <mat-form-field appearance="fill">
-        <mat-select [formControl]="categoryControl" [(ngModel)]="data.viewValue" required>
+        <mat-select [formControl]="categoryControl" [(ngModel)]="taiwanData.category" required>
           <mat-option>分類</mat-option>
           <mat-option *ngFor="let item of categoryList" [value]="item">
             {{item.viewValue}}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="categoryControl.hasError('required')">Please choose an animal</mat-error>
-        <!-- <mat-hint>{{categoryControl.value?.name}}</mat-hint> -->
+        <mat-error *ngIf="categoryControl.hasError('required')">Please choose an category</mat-error>
+        <!-- <mat-hint>{{categoryData.viewValue}}</mat-hint> -->
       </mat-form-field>
     </div>
     <div id='travelArea'>
 
       <h1>北部地區</h1>
       <mat-form-field appearance="fill">
-        <mat-select [formControl]="taipeiControl" required>
+        <mat-select [formControl]="taipeiControl" [(ngModel)]="taiwanData.city" required>
           <mat-option>選擇縣市</mat-option>
           <mat-option *ngFor="let item of taipeiList" [value]="item">
             {{item.viewValue}}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="taipeiControl.hasError('required')">Please choose an animal</mat-error>
+        <mat-error *ngIf="taipeiControl.hasError('required')">Please choose an city</mat-error>
         <!-- <mat-hint>{{taipeiControl.value?.name}}</mat-hint> -->
       </mat-form-field>
 
       <h1>中部地區</h1>
       <mat-form-field appearance="fill">
-        <mat-select [formControl]="centralControl" required>
+        <mat-select [formControl]="centralControl" [(ngModel)]="taiwanData.city" required>
           <mat-option>選擇縣市</mat-option>
           <mat-option *ngFor="let item of centralList" [value]="item">
             {{item.viewValue}}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="centralControl.hasError('required')">Please choose an animal</mat-error>
+        <mat-error *ngIf="centralControl.hasError('required')">Please choose an city</mat-error>
         <!-- <mat-hint>{{taipeiControl.value?.name}}</mat-hint> -->
       </mat-form-field>
 
       <h1>南部地區</h1>
       <mat-form-field appearance="fill">
-        <mat-select [formControl]="southControl" required>
+        <mat-select [formControl]="southControl" [(ngModel)]="taiwanData.city" required>
           <mat-option>選擇縣市</mat-option>
           <mat-option *ngFor="let item of southList" [value]="item">
             {{item.value}}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="southControl.hasError('required')">Please choose an animal</mat-error>
+        <mat-error *ngIf="southControl.hasError('required')">Please choose an city</mat-error>
         <!-- <mat-hint>{{taipeiControl.value?.value}}</mat-hint> -->
       </mat-form-field>
 
       <h1>東部地區</h1>
       <mat-form-field appearance="fill">
-        <mat-select [formControl]="eastControl" required>
+        <mat-select [formControl]="eastControl" [(ngModel)]="taiwanData.city" required>
           <mat-option>選擇縣市</mat-option>
           <mat-option *ngFor="let item of eastList" [value]="item">
             {{item.viewValue}}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="eastControl.hasError('required')">Please choose an animal</mat-error>
+        <mat-error *ngIf="eastControl.hasError('required')">Please choose an city</mat-error>
         <!-- <mat-hint>{{taipeiControl.value?.name}}</mat-hint> -->
       </mat-form-field>
 
       <h1>離島地區</h1>
       <mat-form-field appearance="fill">
-        <mat-select [formControl]="outIslandControl" required>
+        <mat-select [formControl]="outIslandControl" [(ngModel)]="taiwanData.city" required>
           <mat-option>選擇縣市</mat-option>
           <mat-option *ngFor="let item of outIslandList" [value]="item">
             {{item.viewValue}}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="outIslandControl.hasError('required')">Please choose an animal</mat-error>
+        <mat-error *ngIf="outIslandControl.hasError('required')">Please choose an city</mat-error>
         <!-- <mat-hint>{{taipeiControl.value?.name}}</mat-hint> -->
       </mat-form-field>
     </div>
@@ -81,12 +81,13 @@
   <div mat-dialog-actions>
     <!-- <button mat-button (click)="onNoClick()">No Thanks</button> -->
     <!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
-    <button mat-button  id='btnSearch'
+    <button mat-button
+    id='btnSearch'
     class="main-btn"
-    [mat-dialog-close]="data.viewValue"
+    [mat-dialog-close]="taiwanData"
     cdkFocusInitial
-    (click)="searchByKeyword('inputKeyword')" color='primary'>搜尋</button>
-    <button mat-button mat-dialog-close color='warn'>取消</button>
+    (click)="searchByKeyword('inputKeyword')" color='accent'>搜尋</button>
+    <button id='btnCancel' mat-button mat-dialog-close color='warn'>取消</button>
   </div>
 </div>
 

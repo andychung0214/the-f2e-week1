@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { DataService } from './../data.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 import { MatDialogComponentComponent } from './../../shared-material/mat-dialog-component/mat-dialog-component.component';
@@ -91,6 +91,7 @@ export class TravelHeaderComponent implements OnInit {
 
 
   searchByKeyword(keyword: string): void{
+
     let destinatioUrl = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?$top=8&$format=JSON'
     let foodUrl = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/Restaurant?$top=8&$format=JSON'
     let activitiesUrl = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity?$top=8&$format=JSON'
@@ -121,17 +122,63 @@ export class TravelHeaderComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(MatDialogComponentComponent, {
+      data: {category: this.value, city: this.viewValue},
       width: '843px',
       height: '790px',
-      data: {value: this.value, viewValue: this.viewValue},
+      disableClose: false,
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      console.log('this.selectCategory=',this.selectCategory);
+    dialogRef.beforeClosed().subscribe(result => {
       console.log('result=',result);
+      // console.log('result value=',result.category.value);
 
-      this.selectCategory = result;
+      switch (result.category.value) {
+        case 'popular-destination':
+          let destinatioUrl = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot/'
+          if (result.city.value) {
+            destinatioUrl += result.city.value + '?$top=8&$format=JSON';
+            this.datasvc.getKeywordData(destinatioUrl).subscribe(searchResult => {
+              this.destinationDatas = searchResult;
+              this.searchDestinationKeyword.emit(this.datasvc.getKeywordData(destinatioUrl));
+            })
+          }
+          break;
+        case 'popular-food':
+
+          let foodUrl = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/Restaurant/'
+          if (result.city.value) {
+            foodUrl += result.city.value + '?$top=8&$format=JSON';
+            this.datasvc.getKeywordData(foodUrl).subscribe(searchResult => {
+              this.foodDatas = searchResult;
+              this.searchFoodKeyword.emit(this.datasvc.getKeywordData(foodUrl));
+            })
+          }
+          break;
+        case 'recent-activities':
+
+          let activitiesUrl = 'https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity/'
+          if (result.city.value) {
+            activitiesUrl += result.city.value + '?$top=8&$format=JSON';
+            this.datasvc.getKeywordData(activitiesUrl).subscribe(searchResult => {
+              this.activitiesDatas = searchResult;
+              this.searchActivityKeyword.emit(this.datasvc.getKeywordData(activitiesUrl));
+            })
+          }
+          break;
+        default:
+          break;
+      }
+
+    }
+    )
+
+    dialogRef.afterClosed().subscribe(result => {
+      // console.log('The dialog was closed');
+      // console.log('result=',result);
+
+      // this.selectCategory = result;
+      // console.log('this.selectCategory=',this.selectCategory);
+
     });
   }
 

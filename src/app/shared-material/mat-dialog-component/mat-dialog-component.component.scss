@@ -17,15 +17,17 @@ html, body {
   margin-bottom: 50px;
 }
 
-#btnSearch{
+#btnSearch,
+#btnCancel{
   width: 219px;
 height: 68px;
 // left: 694px;
 // top: 1110px;
 
-background: #2F798C;
+// background: #2F798C;
 border-radius: 100px;
 };
+
 
 span{
   font-family: 'SF Pro Text';
@@ -37,3 +39,8 @@ text-align: center;
 
 color: #333333;
 }
+
+// .cdk-global-overlay-wrapper{
+//   width: 843px !important;
+//   height:790px !important;
+// }
