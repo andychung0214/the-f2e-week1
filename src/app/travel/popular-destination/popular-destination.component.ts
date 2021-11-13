@@ -9,8 +9,12 @@ import { DataService } from '../data.service';
 })
 export class PopularDestinationComponent implements OnInit {
   destinationDatas$:Observable<any>;
+  imgNotFoundURL:string;
 
-  constructor(public datasvc: DataService) { }
+
+  constructor(public datasvc: DataService) {
+    this.imgNotFoundURL= 'assets/images/image-not-found.jpg';
+  }
 
   ngOnInit() {
     this.destinationDatas$ = this.datasvc.getAllDestindaionData();

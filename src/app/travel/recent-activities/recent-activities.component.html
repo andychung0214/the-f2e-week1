@@ -14,7 +14,7 @@
 
   <div class='card' *ngFor="let item of activitiesDatas$|async; let idx = Index">
     <div class='imgArea'>
-      <img src="imgNotFoundURL" style="max-width: 100%; ">
+      <img [src]="item.Picture.PictureUrl1 ? item.Picture.PictureUrl1: imgNotFoundURL" style="max-width: 100%; ">
     </div>
     <div class='card-position'>
       <label for="">

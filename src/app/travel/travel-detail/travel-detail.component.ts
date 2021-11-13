@@ -21,8 +21,11 @@ export class TravelDetailComponent implements OnInit {
 
   nearAPI: 'https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?$top=30&$spatialFilter=nearby(25.056400299072266%2C%20121.50760650634766%2C%20600)&$format=JSON';
 
+  imgNotFoundURL:string;
+
 
   constructor(private route: ActivatedRoute, public datasvc: DataService) {
+    this.imgNotFoundURL= 'assets/images/image-not-found.jpg';
 
     this.route.queryParams.subscribe(params => {
       this.params1 = params['id'];

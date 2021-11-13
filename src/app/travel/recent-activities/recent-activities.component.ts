@@ -9,10 +9,11 @@ import { DataService } from '../data.service';
 })
 export class RecentActivitiesComponent implements OnInit {
   activitiesDatas$: Observable<any>;
+  imgNotFoundURL:string;
 
-  imgNotFoundURL: 'assets/images/image-not-found.jpg';
-
-  constructor(public datasvc: DataService) { }
+  constructor(public datasvc: DataService) {
+    this.imgNotFoundURL= 'assets/images/image-not-found.jpg';
+  }
 
   ngOnInit() {
     this.activitiesDatas$ = this.datasvc.getAllEventsData();
