@@ -1,27 +1,32 @@
 # TheF2eWeek1
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+此專案為參加[六角學院](https://www.hexschool.com/)所舉辦的[The F2E](https://2021.thef2e.com/)而生，
 
-## Development server
+至[作品列表](https://2021.thef2e.com/works)，採用所喜愛的設計稿，
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+以一週的時間下去實作，
 
-## Code scaffolding
+這週主題為[「台灣旅遊景點導覽」](https://andychung0214.github.io/the-f2e-week1/#/travel-list)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 使用技術
 
-## Build
+- Angular
+- Scss
+- AJAX
+- RWD
+- Angular Material
+- CSS Flex
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## 採用設計稿資訊
 
-## Running unit tests
+- 設計稿提供：[卡哇邦嘎](http://www.jessenlin.com/)
+- 設計稿網址：[Figma](https://www.figma.com/file/uTXbLAYaEaoSCfkaZh65Eh/%E8%87%BA%E7%81%A3%E6%97%85%E9%81%8A%E6%99%AF%E9%BB%9E%E5%B0%8E%E8%A6%BDrwd?node-id=147%3A374)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 個人投稿資訊
 
-## Running end-to-end tests
+- 個人資訊：https://andychung0214.github.io/about/
+- 投稿位址：https://2021.thef2e.com/users/62964328196105836
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Demo
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+https://andychung0214.github.io/the-f2e-week1/#/travel-list
