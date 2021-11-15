@@ -17,6 +17,7 @@
       name="searchKeyword"
       id="searchKeyword"
       placeholder="&#xF002;請輸入關鍵字"
+      (keyup.enter)="searchByKeyword(inputKeyword)"
       style="font-family:Arial, FontAwesome"
       [formControl]="seacrchingInputControl">
       <!-- <img src="assets/images/magnifier.png" alt=""> -->
@@ -37,9 +38,7 @@
     <!-- <button id='btnSearch' class="main-btn" (keyup.enter) (click)="searchByKeyword(inputKeyword)">搜尋</button> -->
     <input id='btnSearch'
     class="main-btn"
-    (keyup)="($event.which === 13)?searchByKeyword(inputKeyword):0"
     (click)="searchByKeyword(inputKeyword)"
-
       type="button" value="搜尋">
     <select name="" id="selCity"  >
       <option value=""></option>
