@@ -13,11 +13,12 @@
     <div style="display: flex; flex-direction: row; justify-content:center;"  class="page-title">尋找臺灣</div>
     <div style="display: flex; flex-direction: row; justify-content: center;" class="page-category"><p>景點、美食、活動</p></div>
     <div style="display: flex; flex-direction: row; justify-content: center;">
-      <input type="text"
+      <input type="search"
       name="searchKeyword"
       id="searchKeyword"
       placeholder="&#xF002;請輸入關鍵字"
       (keyup.enter)="searchByKeyword(inputKeyword)"
+      (search)="searchByKeyword(inputKeyword)"
       style="font-family:Arial, FontAwesome"
       [formControl]="seacrchingInputControl">
       <!-- <img src="assets/images/magnifier.png" alt=""> -->
