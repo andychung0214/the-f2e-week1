@@ -45,7 +45,7 @@
         <mat-select [formControl]="southControl" [(ngModel)]="taiwanData.city" required>
           <mat-option>選擇縣市</mat-option>
           <mat-option *ngFor="let item of southList" [value]="item">
-            {{item.value}}
+            {{item.viewValue}}
           </mat-option>
         </mat-select>
         <mat-error *ngIf="southControl.hasError('required')">Please choose an city</mat-error>
