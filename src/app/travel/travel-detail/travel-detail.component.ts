@@ -66,6 +66,11 @@ export class TravelDetailComponent implements OnInit {
     this.googleMapUrl = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.587744406794!2d135.77265191541818!3d34.96694007641959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60010f14384c5a19%3A0x5d22970f58bfde17!2z5LyP6KaL56i76I235aSn56S-IOWNg-acrOmzpeWxhQ!5e0!3m2!1szh-TW!2stw!4v1634718270716!5m2!1szh-TW!2stw';
   }
 
+  /**
+   * 藉由名稱取得城市
+   * @param cityName 城市名稱
+   * @returns
+   */
   GetCityByName(cityName:string){
     let cityEnName = '';
     switch (cityName) {

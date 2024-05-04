@@ -98,6 +98,10 @@ export class MatDialogComponentComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * 以關鍵字做查詢
+   * @param keyword 關鍵字
+   */
   searchByKeyword(keyword: string):void{
     console.log('this.selectedCategory=',this.selectedCategory)
     this.dialogRef.close();
