@@ -8,7 +8,7 @@
   <div id='detailInfo' *ngFor="let item of detailData">
     <div id='detailInfoArea'>
       <h1>{{ item.Name }}</h1>
-      <p id='category'>{{ item.Class1}}</p>
+      <p id='category'>{{ item.Class1 ? item.Class1 : item.Class2 }}</p>
     </div>
     <div id='detailMain'>
       <div>
@@ -16,6 +16,7 @@
       </div>
       <div id='detalMainInfo'>
         <h1>資訊</h1>
+        {{ item.DescriptionDetail}}
         <br>
         <h2>電話：</h2>
         <p>{{ item.Phone  }}
@@ -78,11 +79,11 @@
             </label>
           </div>
           <div class='card-title'>{{ item.Name }}</div>
-          <div class='card-phone'>電話</div>
+          <div class='card-phone'>電話: {{ item.Phone }} </div>
           <div class='card-address'>地址: {{ item.Address}}</div>
-          <div class='card-open-time'>開放時間</div>
+          <div class='card-open-time'>開放時間: {{ item.OpenTime}}</div>
           <div class='card-mark'>{{ item.OpenTime}}</div>
-          <div class='card-detail'><a href="/the-f2e-week1/#/travel-list/detail?id={{ item.ID }}"><button>查看詳情</button></a></div>
+          <!-- <div class='card-detail'><a href="/the-f2e-week1/#/travel-list/detail?id={{ item.ID }}"><button>查看詳情</button></a></div> -->
         </div>
       </div>
 

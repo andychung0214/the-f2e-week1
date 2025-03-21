@@ -1,4 +1,4 @@
-import { HttpClientModule } from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -15,7 +15,9 @@ import { SharedMaterialModule } from './shared-material/shared-material.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatDialogComponentComponent } from './shared-material/mat-dialog-component/mat-dialog-component.component';
+import { HttpInterceptorService } from "./services/http-interceptor.service";
 
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -32,9 +34,13 @@ import { MatDialogComponentComponent } from './shared-material/mat-dialog-compon
     TravelModule,
     SharedMaterialModule,
     NoopAnimationsModule,
+    MatDialogModule
+
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true }
+  ],
   bootstrap: [AppComponent],
-  entryComponents:[MatDialogComponentComponent]
+  // entryComponents:[MatDialogComponentComponent]
 })
 export class AppModule { }

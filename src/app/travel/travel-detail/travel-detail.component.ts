@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { DataService } from '../data.service';
-
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-travel-detail',
@@ -42,17 +42,17 @@ export class TravelDetailComponent implements OnInit {
 
     switch (this.params2) {
       case 'popular-destination':
-        this.httpURL = "https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot/"+ this.city +"?$filter=ID%20eq%20'"+ this.params1 +"'&$top=1&$format=JSON";
+        this.httpURL = environment.basicTDX + "/v2/Tourism/ScenicSpot/"+ this.city +"?$filter=ScenicSpotID%20eq%20'"+ this.params1 +"'&$top=1&$format=JSON";
         console.log
         break;
       case 'popular-food':
-        this.httpURL = "https://ptx.transportdata.tw/MOTC/v2/Tourism/Restaurant/"+ this.city +"?$filter=ID%20eq%20'"+ this.params1 +"'&$top=1&$format=JSON";
+        this.httpURL = environment.basicTDX + "/v2/Tourism/Restaurant/"+ this.city +"?$filter=RestaurantID%20eq%20'"+ this.params1 +"'&$top=1&$format=JSON";
         break;
       case 'recent-activities':
-        this.httpURL = "https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity/"+ this.city +"?$filter=ID%20eq%20'"+ this.params1 +"'&$top=1&$format=JSON";
+        this.httpURL = environment.basicTDX + "/v2/Tourism/Activity/"+ this.city +"?$filter=ActivityID%20eq%20'"+ this.params1 +"'&$top=1&$format=JSON";
         break;
       default:
-        this.httpURL = "https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot/"+ this.city +"?$filter=ID%20eq%20"+ this.params1 +"&$top=1&$format=JSON";
+        this.httpURL = environment.basicTDX + "/v2/Tourism/ScenicSpot/"+ this.city +"?$filter=ScenicSpotID%20eq%20"+ this.params1 +"&$top=1&$format=JSON";
         break;
     }
 
@@ -147,6 +147,11 @@ export class TravelDetailComponent implements OnInit {
         break;
     }
     return cityEnName;
+  }
+
+
+  getActivityId(item: any): string {
+    return item.ActivityID || item.ScenicSpotID || item.RestaurantID;
   }
 
 }

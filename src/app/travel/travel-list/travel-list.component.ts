@@ -27,6 +27,8 @@ export class TravelListComponent implements OnInit {
 
   ngOnInit() {
 
+    this.datasvc.run();
+
     this.destinationDatas$ = this.datasvc.getDestindaionData();
     this.foodDatas$ =   this.datasvc.getFoodData();
     this.activitiesDatas$ = this.datasvc.getEventsData();
@@ -44,5 +46,6 @@ export class TravelListComponent implements OnInit {
   doSearchActivity(searchActivityData){
     this.activitiesDatas$ = searchActivityData;
   }
+
 
 }

@@ -24,6 +24,7 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "buildOptimizer": true,
+            "optimization": false,
             "assets": [
               "src/favicon.ico",
               "src/assets"

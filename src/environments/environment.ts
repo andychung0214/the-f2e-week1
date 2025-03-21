@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiDomain: 'https://localhost:7223',
+  basicTDX: 'https://tdx.transportdata.tw/api/basic'
 };
 
 /*
